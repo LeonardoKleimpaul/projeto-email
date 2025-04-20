@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend/projeto-email-front
+    ports:
+      - "5173:80"  # 5173 pra manter padrão Vue Dev
