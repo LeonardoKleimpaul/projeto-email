@@ -5,8 +5,9 @@ import axios from 'axios'
 const msg = ref('')
 
 onMounted(() => {
-  axios.get('http://127.0.0.1:5000/api/hello')
+  axios.get('http://127.0.0.1:5000/api/email/hello')
     .then(res => {
+      console.log(res)
       msg.value = res.data.message
     })
     .catch(err => {
