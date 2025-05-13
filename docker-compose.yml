@@ -5,8 +5,28 @@ services:
       - "5000:5000"
     volumes:
       - ./backend:/app
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/meubanco
 
   frontend:
     build: ./frontend/projeto-email-front
     ports:
       - "5173:80"  # 5173 pra manter padrão Vue Dev
+
+  db:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: projeto_email
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
