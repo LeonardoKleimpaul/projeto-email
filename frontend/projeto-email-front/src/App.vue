@@ -1,22 +1,16 @@
-<script setup>
-import { onMounted, ref } from 'vue';
-import axios from 'axios';
-
-const msg = ref('');
-
-onMounted(() => {
-  axios.get('http://127.0.0.1:5000/api/email/hello')
-    .then(res => {
-      console.log(res);
-      msg.value = res.data.message;
-    })
-    .catch(err => {
-      msg.value = 'Erro ao conectar com a API';
-      console.error(err);
-    })
-});
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">Sobre</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
+
+<style>
+nav {
+  padding: 1rem;
+  background: #eee;
+}
+</style>
