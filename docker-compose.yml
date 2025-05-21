@@ -11,9 +11,15 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/meubanco
 
   frontend:
-    build: ./frontend/projeto-email-front
+    build:
+      context: ./frontend/projeto-email-front
+      dockerfile: Dockerfile.dev
     ports:
-      - "5173:80"  # 5173 pra manter padrão Vue Dev
+      - "5173:5173"
+    volumes:
+      - ./frontend/projeto-email-front:/app
+      - /app/node_modules
+    working_dir: /app
 
   db:
     image: postgres:16
