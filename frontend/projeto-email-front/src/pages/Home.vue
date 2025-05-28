@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>aasdsd</h1>
+    <h1 class="text-3xl font-bold underline text-red-500">
+    Hello worlad!
+  </h1>
     <p>{{ msg }}</p>
   </div>
 </template>
