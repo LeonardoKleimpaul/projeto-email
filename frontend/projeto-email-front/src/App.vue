@@ -18,15 +18,15 @@
 						</a>
                   	</li>
                 	<li>	
-						<a class="block px-4 py-2 mr-2 font-normal transition-all ease-in-out lg-max:opacity-0 duration-250 text-sm text-slate-700 lg:px-2" href="/email/listar">
+						<a class="block px-4 py-2 mr-2 font-normal transition-all ease-in-out lg-max:opacity-0 duration-250 text-sm text-slate-700 lg:px-2" href="/email/index">
 							<i class="mr-1 fa fa-user opacity-60"></i>
 							Listar emails
 						</a>
                   	</li>
                   	<li>
-						<a class="block px-4 py-2 mr-2 font-normal transition-all ease-in-out lg-max:opacity-0 duration-250 text-sm text-slate-700 lg:px-2" href="../pages/sign-up.html">
+						<a class="block px-4 py-2 mr-2 font-normal transition-all ease-in-out lg-max:opacity-0 duration-250 text-sm text-slate-700 lg:px-2" href="/email/new">
 							<i class="mr-1 fas fa-user-circle opacity-60"></i>
-							Sign Up
+							Criar
 						</a>
                   	</li>
                   	<li>
